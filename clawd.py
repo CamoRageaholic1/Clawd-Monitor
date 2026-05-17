@@ -635,11 +635,11 @@ def render_menubar(state, err, stale=False):
                      else "#999999")]
         if stale:
             lines.append(f"stale read - {err or 'no response'} | color=#E0A82E")
-    py, script = sys.executable, os.path.abspath(__file__)
+    py, script = sys.executable, os.path.realpath(__file__)
     lines += ["---",
-              f"Show all (24h/7d/30d/all) | bash={py} param1={script} "
+              f'Show all (24h/7d/30d/all) | bash="{py}" param1="{script}" '
               f"param2=--showall terminal=true refresh=false",
-              f"Open live widget | bash={py} param1={script} "
+              f'Open live widget | bash="{py}" param1="{script}" '
               f"param2=--widget terminal=true refresh=false"]
     if cb_available():
         lines.append("Open Codeburn | bash=codeburn terminal=true refresh=false")
