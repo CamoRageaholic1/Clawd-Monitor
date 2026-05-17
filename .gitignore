@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# clawd runtime data (created in ~/.clawd, never committed)
+.clawd/
+*.jsonl
+
+# macOS
+.DS_Store
